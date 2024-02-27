@@ -1,0 +1,38 @@
+﻿@{
+    ViewData["Title"] = "Dipendenti";
+}
+
+<h2>Pagina Dipendenti</h2>
+
+<div class="container">
+    <table class="table table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th>Nome</th>
+                <th>Cognome</th>
+                <th>Indirizzo</th>
+                <th>Codice Fiscale</th>
+                <th>Coniugato/a</th>
+                <th>Figli a Carico</th>
+                <th>Mansione</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var dipendente in Model)
+            {
+                <tr>
+                    <td>@dipendente.Nome</td>
+                    <td>@dipendente.Cognome</td>
+                    <td>@dipendente.Indirizzo</td>
+                    <td>@dipendente.CF</td>
+                    <td>@(dipendente.Coniugato ? "Sì" : "No")</td>
+                    <td>@dipendente.FigliACarico</td>
+                    <td>@dipendente.Mansione</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<div class="container">
+    <a asp-controller="Dipendente" asp-action="Add" class="btn btn-primary">Aggiungi Dipendente</a>
+</div>

@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Add Pagamenti";
+}
+
+<div class="container">
+    <h2>Add Pagamenti</h2>
+    <form asp-controller="Pagamento" asp-action="Add" method="post">
+        <div class="form-group">
+            <label for="periodo">Periodo:</label>
+            <input type="date" id="periodo" name="periodo" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="totale">Totale:</label>
+            <input type="number" id="totale" name="totale" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="tipoPagamento">Tipo Pagamento:</label>
+            <input type="text" id="tipoPagamento" name="tipoPagamento" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="idDipendente">ID Dipendente:</label>
+            <input type="number" id="idDipendente" name="idDipendente" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
